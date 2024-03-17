@@ -1,0 +1,14 @@
+<div class="quiz-container">
+    <div class="question-card">
+        <div class="question-text">
+          {{ question().question }}
+        </div>
+        <div class="options">
+          @for (option of question().options; track $index) {
+            <button (click)="onAnswer(option)" class="option">
+              {{ option }}
+            </button>
+          }
+        </div>
+      </div>
+</div>
